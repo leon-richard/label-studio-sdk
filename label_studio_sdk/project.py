@@ -1686,8 +1686,8 @@ class Project(Client):
             )
         root = os.environ['LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT']
 
-        if not os.path.isdir(local_store_path):
-            raise ValueError(f'{local_store_path} is not a directory')
+        # if not os.path.isdir(local_store_path):
+        #     raise ValueError(f'{local_store_path} is not a directory')
         if (Path(root) in Path(local_store_path).parents) is False:
             raise ValueError(
                 f'{str(Path(root))} is not presented in local_store_path parents: '
